@@ -67,14 +67,17 @@ export default {
 <style scoped lang='scss'>
     @import '@/style/utilities';
     header{
-        height: 15%;
+        height: 150px;
     }
     .container{
         justify-content: space-between;
         align-items: center;
+        img{
+            width: 70px;
+        }
         li{
             margin: 10px;
-            line-height: 100px;
+            line-height: 150px;
             font-size: 14px;
             color: #464646;
             &:hover{

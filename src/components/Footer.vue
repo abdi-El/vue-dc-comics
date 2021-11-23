@@ -49,8 +49,18 @@
                 <img src="@/assets/dc-logo-bg.png" alt="logo">
             </div>
         </section>
-        <section class="container display-flex">
-            <button>SIGN-UP NOW!</button>
+        <section>
+            <div class="container display-flex">
+                <button>SIGN-UP NOW!</button>
+                <div class="social display-flex">
+                    <span>FOLLOW US</span>
+                    <img src="@/assets/footer-facebook.png" alt="facebook">
+                    <img src="@/assets/footer-twitter.png" alt="twitter">
+                    <img src="@/assets/footer-youtube.png" alt="youtube">
+                    <img src="@/assets/footer-pinterest.png" alt="pintrest">
+                    <img src="@/assets/footer-periscope.png" alt="periscope">
+                </div>
+            </div>
         </section>
     </footer>
 </template>
@@ -67,11 +77,11 @@ export default {
         flex-grow: 1;
         background-image: url('../assets/footer-bg.jpg');
         background-size: cover;
-        padding: 25px 0;
+        padding-top: 25px;
         img{
             width: 90%;
         }
-        section{
+        section:first-child{
             .info{
                 width: 50%;
                 .links{
@@ -84,16 +94,28 @@ export default {
             }
         }
         section:last-child{
-            position: fixed;
             bottom: 0;
-            justify-content: space-between;
-            height: 50px;
+            height: 70px;
             padding: 5px;
-            button{
-                border:1px solid dodgerblue;
-                padding: 10px;
-                color: white;
-                background-color: transparent;
+            background-color: #303030;
+            padding: 10px;
+            div.container{
+                justify-content: space-between;
+                align-items: center;
+                button{
+                    border:1px solid dodgerblue;
+                    padding: 10px;
+                    color: white;
+                    background-color: transparent;
+                }
+                .social{
+                    color: dodgerblue;
+                    align-items: center;
+                    img{
+                        width: 30px;
+                        margin: 10px;
+                    }
+                }
             }
         }
     }
