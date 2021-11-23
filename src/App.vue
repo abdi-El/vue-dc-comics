@@ -3,16 +3,19 @@
     <Header />
     <main>
       <section></section>
+      <OptionSection/>
     </main>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import OptionSection from '@/components/OptionSection'
 export default {
   name: 'App',
   components: {
     Header,
+    OptionSection,
   }
 }
 </script>
@@ -27,9 +30,9 @@ export default {
     height: 100vh;
   }
   main{
-    height: 40%;
+    height: 50%;
     section:first-child{
-        height: 50%;
+        height: 40%;
         width: 100% ;
         background-color:black ;
     }

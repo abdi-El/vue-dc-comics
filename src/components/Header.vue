@@ -68,7 +68,6 @@ export default {
     @import '@/style/utilities';
     header{
         height: 20%;
-        padding: 20px;
     }
     .container{
         justify-content: space-between;
