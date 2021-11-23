@@ -1,10 +1,10 @@
 <template>
-  <header>
-      <div class="container">
+  <header class="display-flex">
+      <div class="container display-flex">
         <img src="@/assets/dc-logo.png" alt="">
-        <ul>
-            <li v-for='(link, index) in links' :key="`link-${index}`">
-                <h3>{{link.text}}</h3>
+        <ul class="display-flex">
+            <li v-for='(link, index) in this.links' :key='`link-${index}`' :class={active:link.active}>
+                <span>{{link.text}}</span>
             </li>
         </ul>
       </div>
@@ -64,8 +64,30 @@ export default {
 }
 </script>
 
-<style scoped>
-    .container{
-        height: 100px;
+<style scoped lang='scss'>
+    @import '@/style/utilities';
+    header{
+        height: 20%;
+        padding: 20px;
     }
+    .container{
+        justify-content: space-between;
+        align-items: center;
+        li{
+            margin: 10px;
+            line-height: 100px;
+            font-size: 14px;
+            color: #464646;
+            &:hover{
+                border-bottom:5px solid dodgerblue;
+                color: dodgerblue !important;
+                cursor: pointer;
+            }
+        }
+    }
+    .active{
+        border-bottom:5px solid dodgerblue;
+        color: dodgerblue !important;
+    }
+    
 </style>
