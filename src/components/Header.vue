@@ -67,7 +67,7 @@ export default {
 <style scoped lang='scss'>
     @import '@/style/utilities';
     header{
-        height: 20%;
+        height: 15%;
     }
     .container{
         justify-content: space-between;

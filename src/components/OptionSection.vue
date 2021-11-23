@@ -1,8 +1,10 @@
 <template>
-    <section class="display-flex container">
-        <div v-for="(obj, index) in this.objects" :key='`obj-${index}`'>
-            <img :src="obj.img" :alt="obj.text">
-            <span>{{obj.text}}</span>
+    <section class="display-flex">
+        <div class="display-flex container">
+            <div v-for="(obj, index) in this.objects" :key='`obj-${index}`' class="option-container">
+                <img :src='require(`../assets/${obj.img}`)' :alt="obj.text">
+                <span>{{obj.text}}</span>
+            </div>
         </div>
     </section>
 </template>
@@ -14,23 +16,23 @@ export default {
         return{
             objects:[
                 {
-                    img: '@/assets/dc-logo.png',
+                    img: 'buy-comics-digital-comics.png',
                     text: 'DIGITAL COMICS'
                 },
                 {
-                    img: '@/assets/buy-comics-merchandise.png',
+                    img: 'buy-comics-merchandise.png',
                     text: 'DC MERCHANDISE'
                 },
                 {
-                    img: '@/assets/buy-comics-subsriptions.png',
+                    img: 'buy-comics-subscriptions.png',
                     text: 'SUBSCRIPTION'
                 },
                 {
-                    img: '@/assets/buy-comics-shop--locator.png',
+                    img: 'buy-comics-shop-locator.png',
                     text: 'COMIC SHOP LOCATOR'
                 },
                 {
-                    img: '@/assets/buy-dc-power-visa.svg',
+                    img: 'buy-dc-power-visa.svg',
                     text: 'DC MERCHANDISE'
                 }
             ]
@@ -42,9 +44,26 @@ export default {
 <style lang='scss' scoped>
     @import '@/style/utilities';
     section{
-        justify-content: space-between;
+        background-color: dodgerblue;
+        height: 60%;
         div{
-            font-size: 14px;
+            align-items: center;
+            padding: 15px;
+            .option-container{
+                display: flex;
+                align-items: center;
+                width: 20%;
+                height: 100%;
+                color: white;
+                font-size: 13px;
+                font-weight: 300;
+                img{
+                    width: 30%;
+                }
+                span{
+                    margin: 0 5px
+                }
+            }
         }
     }
 </style>
