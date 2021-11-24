@@ -45,7 +45,7 @@ export default {
     @import '@/style/utilities';
     section{
         background-color: dodgerblue;
-        height: 60%;
+        height: 200px;
         div{
             align-items: center;
             padding: 15px;
