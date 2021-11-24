@@ -8,6 +8,9 @@
           <ul>
               <Comics v-for='(comic, index) in comics' :key='`comic-${index}`' :comicName='comic.series' :imgPath='comic.thumb'/>
           </ul>
+          <div>
+              <button>LOAD MORE</button>
+          </div>
       </div>
   </section>
 </template>
@@ -55,6 +58,9 @@ export default {
                 margin: 20px 0px;
                 display: flex;
                 flex-wrap: wrap;
+            }
+            div:last-child{
+                text-align: center;
             }
         }
     }
