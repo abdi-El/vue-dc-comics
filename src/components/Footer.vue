@@ -90,6 +90,9 @@ export default {
                         color: white;
                         margin: 10px 0;
                     }
+                    a:hover{
+                        color: white;
+                    }
                 }
             }
         }
@@ -107,6 +110,13 @@ export default {
                     padding: 10px;
                     color: white;
                     background-color: transparent;
+                    &:hover{
+                        background-color: dodgerblue;
+                        cursor: pointer;
+                    }
+                    &:active{
+                        scale: 0.97;
+                    }
                 }
                 .social{
                     color: dodgerblue;

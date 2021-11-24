@@ -24,6 +24,11 @@ export default {
         img{
             width: 100%;
             object-fit: cover;
+            transition: scale 0.3s;
+            &:hover{
+                scale: 1.05;
+                cursor: pointer;
+            }
         }
         span{
             display: inline-block;
